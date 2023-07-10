@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> 
+            Задание 8-4
+        </title>
+    </head>
+    <body>
+        <style>
+            .color{
+                background-color: black;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color: white;
+                padding: 10px;
+            }
+        </style>
+        <img src="kootik.jpeg" id="pic" width="150px">
+        <br>
+        <button class="color" onclick="changePICTURE()"> &larr; BACK</button>
+        <button class="color" onclick="changePIC()"> NEXT &rarr; </button>
+        <script>
+            function changePIC(){
+                pic.src= "kotik.jpg";
+                width= 150;
+            }
+            function changePICTURE(){
+                pic.src="kootik.jpeg";
+                width=150;
+            }
+        </script>
+    </body>
+</html>

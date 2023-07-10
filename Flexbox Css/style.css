@@ -1,0 +1,76 @@
+.header {
+    display: flex;
+    color: white;
+    background-color: #4376A6;
+    font-family: sans-serif;
+    padding-left: 10%;
+    padding-right: 50px;
+}
+
+.logo {
+    padding-right: 10%;
+}
+
+.input {
+    border-radius: 20px;
+    background-color: #1A4B78;
+    border: #1A4B78;
+    height: 30px;
+    margin-left: 450px;
+    margin: 10px;
+}
+
+.button {
+    width: 20%;
+    margin: 30px 15px 10px 65px;
+
+}
+
+.img {
+
+    flex-wrap: wrap;
+    width: 25%;
+}
+
+.info {
+    width: 30%;
+    margin: 16px 170px 16px 150px;
+    padding: 20px;
+}
+
+.words {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    margin: -35px 0px;
+}
+
+.dano {
+    float: left;
+    color: rgb(52, 64, 66);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.word-id {
+    color: black;
+    margin: 10px 25px;
+}
+
+.users {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0px;
+}
+
+.us {
+    margin: 5px;
+}
+
+.kart {
+    margin: 10px;
+    padding: 20px;
+}
+
+.line {
+    border-bottom: 1px solid rgba(60, 69, 102, 0.288);
+}

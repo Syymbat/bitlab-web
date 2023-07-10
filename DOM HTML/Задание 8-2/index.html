@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Задание 8-2</title>
+</head>
+<body>
+  <div id="iid">
+    
+    <button onclick="increment()">+</button>
+    <p id="value">0</p>
+    <button onclick="decrement()">-</button>
+  </div>
+
+  <script>
+    var valueElement = document.getElementById("value");
+    var value = 0;
+
+    function increment() {
+      value++;
+      updateValue();
+    }
+
+    function decrement() {
+      value--;
+      updateValue();
+    }
+
+    function updateValue() {
+      valueElement.textContent = value;
+    }
+  </script>
+</body>
+</html>

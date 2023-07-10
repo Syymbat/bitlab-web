@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        DOM HTML
+    </title>
+</head>
+<style>
+    .input {
+        margin: 10px 10px;
+    }
+
+    .inputeet {
+        margin: 10px 45px;
+    }
+
+    .buttom {
+        margin-left: 15%;
+        padding: 0px 20px;
+        color: white;
+        background-color: rgb(67, 106, 173);
+    }
+
+    .error {
+        border: 1px solid red;
+    }
+</style>
+
+<body>
+    <div>
+        LOGIN:
+        <input class="inputeet" type="text" id="login" placeholder="Логин">
+    </div>
+    <div>
+        PASSWORD:
+        <input class="input" type="password" id="password" placeholder="Пароль">
+    </div>
+    <button class="buttom" onclick="authenticate()">
+        SIGN IN
+    </button>
+    <script>
+        function authenticate() {
+            var loginInput = document.getElementById("login");
+            var passwordInput = document.getElementById("password");
+
+            var login = loginInput.value;
+            var password = passwordInput.value;
+
+            var authenticated = checkCredentials(login, password);
+
+            if (authenticated) {
+                
+                loginInput.style.border = "2px solid green";
+                passwordInput.style.border = "2px solid green";
+                alert("You are authenticated")
+            } else {
+               
+                loginInput.style.border = "2px solid red";
+                passwordInput.style.border = "2px solid red";
+            }
+        }
+
+        function checkCredentials(login, password) {
+            var users = [
+                { "login": "Iliyas", "password": "qwerty" }
+            ];
+
+            for (var i = 0; i < users.length; i++) {
+                if (users[i].login === login && users[i].password === password) {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+    </script>
+</body>
+
+</html>

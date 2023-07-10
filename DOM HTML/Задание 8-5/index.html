@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Задание 8-5
+    </title>
+</head>
+
+<body>
+    <img src="белая картина.png" id="pic" width="150px" height="120px">
+    <br>
+
+    <button onclick="changeImage('kootik.jpeg')" class="button">
+        <img src="kootik.jpeg" id="pic2" width="50px">
+    </button>
+
+    <button onclick="changeImage('kotik.jpg')" class="button">
+        <img src="kotik.jpg" id="pic3" width="50px">
+    </button>
+
+    <button onclick="changeImage('kootik.jpeg')" class="button">
+        <img src="kootik.jpeg" id="pic4" width="50px">
+    </button>
+    <script>
+        function changeImage(imageUrl) {
+            var pic = document.getElementById("pic");
+            pic.src = imageUrl;
+        }
+    </script>
+</body>
+
+</html>

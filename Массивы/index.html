@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>массивы</title>
+    </head>
+    <body>
+        <script>
+            // Задание 7 - 1
+// Программа запрашивает число n. Далее, мы вводим n чисел и сохраняем все введенные числа в массив. Далее, программа запрашивает пользователя число m. Если число m существует в нашем массиве, программа должна вывести слово "Yes" и вывести индекс (расположение, адрес) данного числа. Иначе вывести слово "No".
+            // let  n= parseInt(prompt("Введите количество чисел:"));
+            // let numbers = [];
+            // for(let i = 0; i < n; i++){
+            //     let num = parseInt(prompt("Введите число:"));
+            //     numbers.push(n);
+            // }
+            // let m=parseInt(prompt("Введите число для поиска: "));
+            // if (numbers.includes(m)){
+            //     console.log("Yes")
+            // }else{
+            //     console.log("No");
+            // }
+// ---------------------------------------------------------------------------------------------------
+            // Задание 7 - 2
+// Напишите программу которая запрашивает числа пока мы не введем 0. Все введенные числа кроме 0 должны записываться в массив. В итоге выведите геометрическую среднюю введенных чисел.
+            // let numbers = [];
+            // let num;
+
+            // do {
+            // num = parseFloat(prompt("Введите число (для завершения введите 0):"));
+            // if (num !== 0) {
+            //      numbers.push(num);
+            //     }
+            //     } while (num !== 0);
+
+            // let product = numbers.reduce((accumulator, currentValue) => accumulator * currentValue);
+            // let geometricMean = Math.pow(product, 1 / numbers.length);
+
+            // console.log("Геометрическая средняя:", geometricMean.toFixed(3));
+
+            // ---------------------------------------------------------------------------------------------------
+            // Задание 7 - 3
+// Напишите программу которая запрашивает числа пока мы не введем 0. Все введенные числа кроме 0 должны записываться в массив. В итоге выведите только положительные элементы.
+            // let numbers = [];
+            // let num;
+
+            // do {
+            // num = parseInt(prompt("Введите число (для завершения введите 0):"));
+            // if (num !== 0) {
+            //      numbers.push(num);
+            //     }
+            //     } while (num !== 0);
+            // let  positiveNumber = numbers.filter(number=>number>0);
+          
+            // console.log(positiveNumber);
+            // ---------------------------------------------------------------------------------------------------
+
+            // Задание 7 - 4
+// Вводим число n. Затем n элементов и записываем все элементы в массив. В итоге выведите умножение элементов не равных нулю.
+            // let  n = parseInt(prompt("Введите количество чисел:"));
+            // let numbers = [];
+            // for(let i = 0; i < n; i++){
+            //     let num = parseInt(prompt("Введите число:"));
+            //     numbers.push(n);
+            // }
+            // let m = parseInt(prompt("Введите число: m"));
+            // let nenolechisla = numbers.filter(number=> number !== 0).reduce((accumulator, currenValue) => accumulator * currenValue);
+            // console.log(nenolechisla);
+            // ---------------------------------------------------------------------------------------------------
+
+            // Задание 7 - 5
+// У нас есть список автомобилей в базе с критериями: имя, год выпуска, объем двигателя и цена. Все машины будут записаны и сохранены в двумерный ассоциативный массив заранее (можете произвольно записать свои любимые машины). При запуске программы, у вас появляется выбор критерии, по которым вы делаете поиск.
+
+
+            //     var cars = [
+            //     {"name": "Toyota", "price": 12000000, "year": 2015, "volume": 2.2},
+            //     {"name": "Mercedes", "price": 70000000, "year": 2018, "volume": 3.8},
+            //     {"name": "Toyota", "price": 7000000, "year": 2013, "volume": 2.0},
+            //     {"name": "BMW", "price": 11000000, "year": 2011, "volume": 3.0},
+            //     ];
+
+            //     function searchByName(name) {
+            //     var result = cars.filter(function(car) {
+            //     return car.name.toLowerCase() === name.toLowerCase();
+            //     });
+            //     return result;
+            //     }
+
+            //     function searchByYear(startYear, endYear) {
+            //     var result = cars.filter(function(car) {
+            //     return car.year >= startYear && car.year <= endYear;
+            //     });
+            //     return result;
+            //     }
+
+            //     function searchByEngineVolume(startVolume, endVolume) {
+            //     var result = cars.filter(function(car) {
+            //     return car.volume >= startVolume && car.volume <= endVolume;
+            //     });
+            //     return result;
+            //     }
+
+            //     function searchByPrice(startPrice, endPrice) {
+            //     var result = cars.filter(function(car) {
+            //     return car.price >= startPrice && car.price <= endPrice;
+            //     });
+            //     return result;
+            //     }
+
+            //     function main() {
+            //     while (true) {
+            //         var choice = parseInt(prompt(
+            //             "INSERT [1] TO SEARCH BY NAME\n" +
+            //             "INSERT [2] TO SEARCH BY YEAR\n" +
+            //             "INSERT [3] TO SEARCH BY ENGINE VOLUME\n" +
+            //             "INSERT [4] TO SEARCH BY PRICE\n" +
+            //             "INSERT [5] TO EXIT"
+            //         ));
+
+            //         if (choice === 1) {
+            //             var name = prompt("INSERT NAME OF CAR:");
+            //             var result = searchByName(name);
+            //             displayCars(result);
+            //         } else if (choice === 2) {
+            //             var startYear = parseInt(prompt("INSERT YEAR START FROM:"));
+            //             var endYear = parseInt(prompt("INSERT YEAR ENDS FROM:"));
+            //             var result = searchByYear(startYear, endYear);
+            //             displayCars(result);
+            //         } else if (choice === 3) {
+            //             var startVolume = parseFloat(prompt("INSERT ENGINE VOLUME START FROM:"));
+            //             var endVolume = parseFloat(prompt("INSERT ENGINE VOLUME ENDS FROM:"));
+            //             var result = searchByEngineVolume(startVolume, endVolume);
+            //             displayCars(result);
+            //         } else if (choice === 4) {
+            //             var startPrice = parseInt(prompt("INSERT PRICE START FROM:"));
+            //             var endPrice = parseInt(prompt("INSERT PRICE ENDS FROM:"));
+            //             var result = searchByPrice(startPrice, endPrice);
+            //             displayCars(result);
+            //         } 
+
+            //     }
+            // }
+
+            // -------------------------------------------------------------------------------------------------------------------------------------------------------
+            // Задание 7 - 6  
+            
+            
+            // Создайте мини систему управления студентами. При запуске браузера у вас появится выбор, по которым вы можете добавить студента в список, вывести весь список и выйти. У студента будут 3 критерии, имя, фамилия и GPA. 
+         
+         
+            // var students = [];
+
+            //     function addStudent() {
+            //         var name = prompt("INSERT NAME:");
+            //         var surname = prompt("INSERT SURNAME:");
+            //         var gpa = parseFloat(prompt("INSERT GPA:"));
+                
+            //         var student = {
+            //             name: name,
+            //             surname: surname,
+            //             gpa: gpa
+            //         };
+
+            //         students.push(student);
+            //         console.log("Student added successfully.");
+            //     }
+
+            //     function listStudents() {
+            //         if (students.length === 0) {
+            //             console.log("No students found.");
+            //         } else {
+            //             students.forEach(function(student) {
+            //                 console.log("Name: " + student.name + ", Surname: " + student.surname + ", GPA: " + student.gpa);
+            //             });
+            //         }
+            //     }
+
+            //     function main() {
+            //         while (true) {
+            //             var choice = parseInt(prompt(
+            //                 "PRESS 1 TO ADD STUDENT\n" +
+            //                 "PRESS 2 TO LIST STUDENTS\n" +
+            //                 "PRESS 0 TO EXIT"
+            //             ));
+
+            //             if (choice === 1) {
+            //                 addStudent();
+            //             } else if (choice === 2) {
+            //                 listStudents();
+            //             } else if (choice === 0) {
+            //                 break;
+            //             } else {
+            //                 console.log("Invalid choice. Please try again.");
+            //             }
+            //         }
+            //     }
+
+                
+            //     main();
+
+        </script>
+    </body>
+</html>

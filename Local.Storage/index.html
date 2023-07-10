@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <title>twitter.com</title>
+    <head>
+        <script src="script.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        
+    </head>
+
+    <header class = "header">
+        <div class="contain">
+         <div class = "logo">
+                TWITTER
+        </div>
+        <div class = "button">
+            <button style="color: white; background-color:  rgb(38, 155, 157); border: none;">Tweets</button>
+            <button style="color: white; background-color:  rgb(38, 155, 157); border: none;">Login</button>
+            <button style="color: white; background-color:  rgb(38, 155, 157); border: none;">Register</button>
+        </div>   
+        </div>
+    </header>
+    <body>
+        <div class="main">
+            <div class="text">
+                EMAIL:
+            </div>
+            <input style="height: 20px;width: 200px; margin: 10px;" type="email" id="emailInput">
+<!-- ------------------------------- -->
+            <div class="text">
+                PASSWORD:
+            </div>
+            <input style="height: 20px;width: 200px; margin: 10px;" type="password" id="passwordInput">
+<!-- ------------------------------- -->
+
+            <div class="text">
+                FULL NAME:
+            </div>
+            <input style="height: 20px;width: 200px; margin: 10px;" type="text" id="nameInput">
+<!-- ------------------------------- -->
+
+            <div class="text">
+                COUNTRY:
+            </div>
+            <select style="height: 30px;width: 200px; margin: 10px;" id="countrySelect">
+                <option>Kazakhstan</option>
+                <option>USA</option>
+                <option>Brazil</option>
+                <option>Turkey</option>
+                <option>Italy</option>  
+            </select>
+<!-- ------------------------------- -->
+            <div class = "text">
+                BIRTHDATE:
+            </div>
+            <input style="height: 30px; width: 200px; margin: 10px;" type="date" id="birthdateInput">
+            <div>
+                <button
+                    style="color:white; background-color: rgb(15, 15, 124); border: rgb(15, 15, 124); padding: 10px 15px;"
+                    onclick="registerUser()">
+                    Register
+                </button>
+            </div>
+        </div>
+
+        <script>
+            function registerUser() {
+                var email = document.getElementById("emailInput").value;
+                var password = document.getElementById("passwordInput").value;
+                var name = document.getElementById("nameInput").value;
+                var country = document.getElementById("countrySelect").value;
+                var birthdate = document.getElementById("birthdateInput").value;
+                alert("registration is successful")
+            }
+        </script>
+    </body>
+</html>

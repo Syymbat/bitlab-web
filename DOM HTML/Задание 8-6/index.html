@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Задание 8-6</title>
+    <style>
+        .error {
+            color: red;
+        }
+        .confirm{
+            margin: 10px 85px;
+        }
+        .confirm1{
+            margin: 10px 95px;
+        }
+        .confirm2{
+            margin: 10px 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+   
+    <form onsubmit="validateForm(event)">
+        <div>
+            <label for="email">Email:</label>
+            <input class="confirm1" type="email" id="email" required>
+            <span id="emailError" class="error"></span>
+        </div>
+        <div>
+            <label for="password">Пароль:</label>
+            <input type="password" class="confirm" id="password" required>
+            <span id="passwordError" class="error"></span>
+        </div>
+        <div>
+            <label for="confirmPassword">Повторите пароль:</label>
+            <input class="confirm2" type="password" id="confirmPassword" required>
+            <span id="confirmPasswordError" class="error"></span>
+        </div>
+        <button style="margin: 10px; color: white;background-color: rgb(33, 70, 102); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" type="submit">Зарегистрироваться</button>
+    </form>
+
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+
+            var emailInput = document.getElementById("email");
+            var passwordInput = document.getElementById("password");
+            var confirmPasswordInput = document.getElementById("confirmPassword");
+
+            var email = emailInput.value;
+            var password = passwordInput.value;
+            var confirmPassword = confirmPasswordInput.value;
+
+            var isValid = true;
+
+            if (isEmailTaken(email)) {
+                document.getElementById("emailError").textContent = "Этот email уже занят";
+                isValid = false;
+            } else {
+                document.getElementById("emailError").textContent = "";
+            }
+
+            if (password.length < 6) {
+                document.getElementById("passwordError").textContent = "Пароль должен содержать минимум 6 символов";
+                isValid = false;
+            } else {
+                document.getElementById("passwordError").textContent = "";
+            }
+
+            if (password !== confirmPassword) {
+                document.getElementById("confirmPasswordError").textContent = "Пароль и подтверждение пароля не совпадают";
+                isValid = false;
+            } else {
+                document.getElementById("confirmPasswordError").textContent = "";
+            }
+
+            if (isValid) {
+
+                console.log("Форма отправлена");
+            }
+        }
+
+        function isEmailTaken(email) {
+
+            return false;
+        }
+    </script>
+</body>
+
+</html>
